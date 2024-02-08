@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatos em Serviço</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gatos</h1>
+        <p>Veja a maior variedade de gatos com seus fatos e curiosidades</p>
+    </header>
+
+    <div class="card-list">
+        <img id="duckPhotoUrl" src="https://random-d.uk/api/random" class="maxTamanho"  alt="URL Pato" onclick="showDuckPhoto('duckPhotoUrl')">
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function trocarImagem() {
+            // Referenciar a imagem pelo ID
+            var imagemPato = document.getElementById("duckPhotoUrl");
+
+            // Obter uma nova imagem da API
+            fetch("https://random-d.uk/api/random")
+                .then(response => response.url)
+                .then(url => {
+                    // Atualizar a imagem com a nova URL
+                    imagemPato.src = url;
+                })
+                .catch(error => console.error('Erro ao obter a imagem:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" hred="styles.css">
+    <title>Galeria de Gatos e Fatos</title>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="image" onclick="showCatFac('photo1')">
+            <img src="https://catass.com/cat" alt="Cat 1">
+        </div>
+
+        <div class="image" onclick="showCatFac('photo1')">
+            <img src="https://catass.com/cat/gif" alt="Cat 2">
+        </div>
+
+        <div class="image" onclick="showCatFac('photo1')">
+            <img src="https://catass.com/cat" alt="Cat 3">
+        </div>
+    </div>
+
+    <div class="message" id="catFactMessage">
+        <!-- Mensagem dos fatos da API CatFactAPI -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
